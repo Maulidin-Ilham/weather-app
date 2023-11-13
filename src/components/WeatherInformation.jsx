@@ -1,12 +1,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import sun from "../assets/sun.png";
+
 import humidity from "../assets/humidity.png";
 import wind from "../assets/wind.png";
 import cancel from "../assets/cancel.png";
-
-import sunrise from "../assets/sunrise.png";
-import sunset from "../assets/sunset.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import WeatherListInfo from "./WeatherListInfo";
@@ -101,7 +98,7 @@ const WeatherInformation = ({ input = "" }) => {
       ) : input ? (
         <>
           <div className="bg-bluePrimary  w-full h-44 rounded-2xl flex flex-row justify-center shadow-2xl tracking-wider">
-            <WeatherListInfo sun={sun} weather={weather} />
+            <WeatherListInfo weather={weather} />
           </div>
           <div className="bg-bluePrimary mt-4 w-full h-44 rounded-2xl shadow-2xl flex flex-row font-semibold">
             <OtherListInfo humidity={humidity} wind={wind} weather={weather} />
